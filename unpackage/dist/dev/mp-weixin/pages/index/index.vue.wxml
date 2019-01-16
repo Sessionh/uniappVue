@@ -1,0 +1,14 @@
+<template name="1515e32c">
+  <view class="_view data-v-fb446220 content">
+    <view class="_view data-v-fb446220 part2">
+      <swiper class="_swiper data-v-fb446220 banner-box" indicator-dots autoplay indicator-active-color="#169bd5" circular interval="{{5000}}" duration="{{300}}" indicator-color="#ffffff">
+        <swiper-item wx:key="index" key="{{index}}" wx:for="{{bannerList}}" wx:for-index="index" wx:for-item="item" class="_swiper-item data-v-fb446220">
+          <image class="_image data-v-fb446220 banner_image" src="{{item.img}}" mode="aspectFill" lazy-load></image>
+        </swiper-item>
+      </swiper>
+    </view>
+    <view class="_view data-v-fb446220 test" style="width:200rpx; height: 200rpx; background: #8F8F94;">33</view>
+    <view class="_view data-v-fb446220 test" style="width:200rpx; height: 200rpx; background: #8F8F94;">33</view>
+    <view class="_view data-v-fb446220 test" style="width:200rpx; height: 200rpx; background: #8F8F94;">33</view>
+  </view>
+</template>
