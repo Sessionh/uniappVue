@@ -1,7 +1,7 @@
-# vuePC
+# uniapp
 
 #### 项目介绍
-搭建一个 pc 端 vuecli3.0 升级后又的版本
+搭建一个 uniapp 跨多端的 app 
 
 #### 软件架构
 软件架构说明
