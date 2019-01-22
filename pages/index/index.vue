@@ -1,8 +1,31 @@
 <template>
 	<view class="content" >
-		<view class="part2">
-			<swiper class="banner-box" 
-			    indicator-dots 
+		<!-- #ifndef MP-WEIXIN -->
+		<view class="header_top"></view>
+		<!-- #endif -->
+		<view class="header"  v-if="isShow">
+			<view class="search">
+				<view class="add">
+					<text class="iconfont" >&#xe81a;</text>
+				</view>
+				<view class="input">
+					<text class="iconfont">&#xe652;</text>
+					<view class="search_title">菜单、用户等</view>
+				</view>
+				<view class="menu">
+					<text class="iconfont">&#xe636;</text>
+				</view>
+				<view class="alarm">
+					<text class="iconfont">&#xe679;</text>
+				</view>
+			</view>
+			<view class="half_bar"/>
+		</view>
+		
+		
+		<view class="part">
+			<swiper class="banner_box" 
+				indicator-dots 
 				autoplay
 				indicator-active-color="#169bd5"  
 				circular
@@ -10,94 +33,207 @@
 				:duration="300" 
 				indicator-color="#ffffff"
 				>
-				<swiper-item v-for="(item, index) in bannerList" :key="index">
+				<swiper-item v-for="item in bannerList" :key="item.id">
 					<image class="banner_image" :src="item.img"
 						mode="aspectFill" lazy-load></image>
 				</swiper-item>
 			</swiper>
 		</view>
-		<view class="test" style="width:200upx; height: 200upx; background: #8F8F94;">33</view>
-		<view class="test" style="width:200upx; height: 200upx; background: #8F8F94;">33</view>
-		<view class="test" style="width:200upx; height: 200upx; background: #8F8F94;">33</view>
+		<view class="menus">
+			<menuList/>
+		</view>
+		<activityImage/>
+		<footLook/>
+		
+		
+		
 		
 	</view>
 </template>
 
 <script>
+	import menuList from './menu_list.vue';
+	import activityImage from './activity_image';
+	import footLook from './foot_look';
 	export default {
+		components: {
+			menuList,
+			activityImage,
+			footLook,
+		},
 		data() {
 			return {
 				title: 'Hello',
+				viewHeight: 300,
+				isShow: true,
 				bannerList: [
 					{
 						id: 1,
-						img: 'https://img1.qunarzz.com/qs/1901/8d/e7e08c5643e2db02.jpg'
+						img: 'http://source.qunarzz.com/site/images/wns/20181227_qunar_homepage_dujia_6.jpg'
 					},
 					{
 						id: 2,
-						img: 'https://img1.qunarzz.com/qs/1809/1e/28990a4158359902.jpg'
+						img: 'http://source.qunarzz.com/site/images/wns/20181229_dujia_homepage_2.jpg'
 					},
 					{
 						id: 3,
-						img: 'https://img1.qunarzz.com/qs/1809/1e/28990a4158359902.jpg'
+						img: 'https://imgs.qunarzz.com/p/tts2/1804/e5/3f79a9a0ce3ffd02.jpg_r_240x160x90_fa3e9858.jpg'
 					}
 				]
 			}
 		},
 		onLoad() {
+			uni.getSystemInfo({
+				success: (res) => {
+					console.log(res);
+					// #ifndef MP-WEIXIN
+					this.viewHeight = res.windowHeight -35;
+						console.log(this.viewHeight);
+					// #endif
+					// #ifdef MP-WEIXIN
+					this.viewHeight = res.windowHeight;
+					// #endif
+					
+					
+					
+				}
+			})
 
 		},
+		onReady() {
+			
+		},
+// 		onPageScroll(ev) {
+// 			console.log(ev);
+// 		},
 		onPullDownRefresh() { // 下拉刷新监听
-			setTimeout(function () {
+		   // #ifdef MP-WEIXIN
+		    this.isShow = false;
+			// #endif
+			setTimeout( () => {
 				uni.stopPullDownRefresh();
+				this.isShow = true;
 			}, 1000);
 		},
+		computed: {
+            halfWidth() {
+				
+                return uni.upx2px(750 / 2) + 'px';
+            }
+        },
 		methods: {
+			onBut() {
+				console.log(22)
+				uni.getSystemInfo({
+					success: (res) => {
+						console.log(res);
+						
+						
+					}
+				})
+				
+// 				uni.navigateTo({
+// 					url: '/pages/home/mast'
+// 				})
+			}
 			
 
 		}
 	}
 </script>
 
-<style>
-	.content {
-		text-align: center;
-		height: 600upx;
+<style lang="less" scoped>
+
+.search {
+	display: flex;
+	height: 90upx;
+	width: 100%;
+	background: #FFFFFF;
+	
+	justify-content: center;
+	align-items: center;
+	.add {
+		padding: 0 10upx;
+		.add_page{
+			width: 40upx;
+			height: 40upx;
+		}
+		.iconfont {
+			font-size: 40upx;
+		}
+	
 	}
-    .logo{
-        height: 200upx;
-        width: 200upx;
-        margin-top: 200upx;
-    }
-	.title {
-		font-size: 36upx;
-		color: #8f8f94;
+	.input {
+		border-radius: 10upx;
+		flex:1;
+		background: #e8eaec;
+		// height: 55upx;
+		display: flex;
+		.iconfont {
+			font-size: 35upx;
+			margin: 15upx 10upx 10upx 10upx;
+			
+		}
+		.search_title {
+			color: #757575;
+			font-size: 30upx;
+			margin-top: 11upx;
+			
+		}
+		
+	}
+	.menu {
+		.iconfont {
+			font-size: 40upx;
+			margin: 0 20upx 0 30upx;
+		}
+	}
+	.alarm {
+		.iconfont {
+			font-size: 40upx;
+			margin: 0 20upx;
+		}
 	}
 	
-	/* 轮播图 */
-.part2{
-    width: 100%;
-    height: 200upx;
-   /* border-bottom: 20px solid #f9f9f9;
-    overflow: hidden;
-    position: relative; */
 }
-/* .part2:after{
-    content: " ";
-    height: 20px;
-    border-radius: 50%;
-    background: #f9f9f9;
-    position: absolute;
-    bottom: -10px;
-    left: -20px;
-    right: -20px;
-} */
-/* .banner-box{
-    width: 100%;
-    height: 100%;
-} */
-.banner_image{
-    width: 100%;
-    /* height:  100%; */
+
+.menus {
+	padding: 0 20upx;
 }
+
+.half_bar {
+	height: 1upx;
+	width: 100%;
+	background: #e8eaec;
+	
+}
+.header_top {
+	height: var(--status-bar-height)
+}
+.header {
+	position: fixed;
+	top: 0px;
+	height: 90upx;
+	width: 100%;
+	z-index: 2;
+	
+}
+	
+	
+.part{
+    width: 100%;
+    height: 300upx;
+	margin-top: 100upx;
+	.banner_box{
+	    width: 100%;
+	    height: 100%;
+		.banner_image{
+		    width: 100%;
+		    height:  100%;
+		}
+	}
+}
+
+
+
 </style>

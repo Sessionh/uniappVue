@@ -1,0 +1,4 @@
+<import src="/pages/index/menu_list.vue.wxml" />
+<import src="/pages/index/activity_image.vue.wxml" />
+<import src="/pages/index/foot_look.vue.wxml" />
+

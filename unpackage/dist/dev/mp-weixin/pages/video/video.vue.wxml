@@ -1,8 +1,0 @@
-<template name="5fcf29fc">
-  <view class="_view data-v-26902afc content">
-    <view class="_view data-v-26902afc">
-      <text class="_text data-v-26902afc title">{{title}}</text>
-    </view>
-    <view class="_view data-v-26902afc test" style="width:200rpx; height: 200rpx; background: #8F8F94;">33</view>
-  </view>
-</template>
