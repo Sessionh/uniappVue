@@ -1,4 +1,5 @@
 {
-  "navigationBarTitleText": "视频",
+  "navigationStyle": "custom",
+  "navigationBarTitleText": "课堂",
   "enablePullDownRefresh": true
 }

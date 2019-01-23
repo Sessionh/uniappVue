@@ -31,6 +31,95 @@
   font-size: 55rpx;
 }
 
+.text_hidden.data-v-32d9d64f {
+  overflow: hidden;
+  -o-text-overflow: ellipsis;
+     text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.course.data-v-32d9d64f {
+  height: 580rpx;
+  width: 100%;
+}
+.header.data-v-32d9d64f {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 80rpx;
+  width: 100%;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.header .title.data-v-32d9d64f {
+  font-size: 35rpx;
+  font-weight: 600;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding-left: 40rpx;
+}
+.header .iconfont.data-v-32d9d64f {
+  font-size: 50rpx;
+  font-weight: 600;
+}
+.course_view.data-v-32d9d64f {
+  height: 500rpx;
+  width: 100%;
+  white-space: nowrap;
+}
+.course_view .fill_context.data-v-32d9d64f {
+  display: inline-block;
+  width: 40rpx;
+  height: 400rpx;
+}
+.course_view .intro_course.data-v-32d9d64f {
+  width: 300rpx;
+  height: 100%;
+  display: inline-block;
+  margin-right: 20rpx;
+}
+.course_view .intro_course .image_bor.data-v-32d9d64f {
+  width: 300rpx;
+  height: 500rpx;
+  position: relative;
+}
+.course_view .intro_course .image_bor .image.data-v-32d9d64f {
+  width: 100%;
+  height: 400rpx;
+  border-radius: 10rpx;
+}
+.course_view .intro_course .image_bor .teacher.data-v-32d9d64f {
+  width: 60rpx;
+  background: #fff;
+  position: absolute;
+  top: 300rpx;
+  left: calc(25% + 60rpx);
+  font-size: 25rpx;
+  text-align: center;
+  padding: 2rpx 0;
+}
+.course_view .intro_course .image_bor .title.data-v-32d9d64f {
+  position: absolute;
+  top: 350rpx;
+  height: 50rpx;
+  text-align: center;
+  width: 300rpx;
+  font-size: 30rpx;
+  color: #fff;
+  padding: 0 2rpx;
+}
+.course_view .intro_course .image_bor .student_add.data-v-32d9d64f {
+  font-size: 20rpx;
+  color: #808695;
+}
+.course_view .intro_course .image_bor .intro_title.data-v-32d9d64f {
+  font-size: 26rpx;
+}
+
 .fill.data-v-30f22c62 {
   display: inline-block;
   width: 40rpx;
@@ -41,6 +130,7 @@
   width: 100%;
   border-bottom: 1rpx solid #e8eaec;
   position: fixed;
+  z-index: 2;
   top: 0;
   display: -webkit-box;
   display: -webkit-flex;
@@ -50,6 +140,7 @@
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
+  background: #fff;
 }
 .header .search.data-v-30f22c62 {
   -webkit-box-flex: 1;

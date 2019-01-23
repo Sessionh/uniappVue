@@ -32,12 +32,100 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 {
   data: function data() {
-    return {};
+    return {
+      tabAnClass: 'tab_but',
+      topicList: [
+      {
+        id: 1,
+        name: '新出发，新年味',
+        icon: '&#xe623;' },
+
+      {
+        id: 2,
+        name: '新出发可是看到可是看到看上课',
+        icon: '&#xe623;' },
+
+      {
+        id: 3,
+        name: '我的生活有我',
+        icon: '&#xe623;' },
+
+      {
+        id: 4,
+        name: '热门话题',
+        icon: '&#xe67a;' }],
 
 
-  } };exports.default = _default;
+
+      footShowList: [
+      {
+        id: 1,
+        name: '秀早餐',
+        color: '#eef2f5',
+        icon: '&#xe608;' },
+
+      {
+        id: 2,
+        name: '秀午餐',
+        color: '#ded473',
+        icon: '&#xe807;' },
+
+      {
+        id: 3,
+        name: '秀晚餐',
+        color: '#fed9ca',
+        icon: '&#xe613;' }] };
+
+
+
+
+  },
+  methods: {
+    newClick: function newClick(val) {
+      if (val === 1) {
+        this.tabAnClass = 'tab_but';
+      } else {
+        this.tabAnClass = 'tab_but1';
+      }
+
+    } },
+
+  computed: {
+    tabWeight: function tabWeight() {
+      return this.tabAnClass === 'tab_but' ? 600 : 400;
+    },
+    tabWeight1: function tabWeight1() {
+      return this.tabAnClass === 'tab_but1' ? 600 : 400;
+    } } };exports.default = _default;
 
 /***/ }),
 
@@ -67,30 +155,103 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c(
-    "view",
-    [
-      _c("scroll-view", { attrs: { "scroll-y": "true" } }, [
-        _c("view", { staticClass: "demo1" }, [_vm._v("33")]),
-        _c("view", [_vm._v("33")]),
-        _c("view", [_vm._v("33")]),
-        _c("view", [_vm._v("33")]),
-        _c("view", [_vm._v("33")]),
-        _c("view", [_vm._v("33")]),
-        _c("view", [_vm._v("33")]),
-        _c("view", [_vm._v("33")]),
-        _c("view", [_vm._v("33")]),
-        _c("view", [_vm._v("33")]),
-        _c("view", [_vm._v("33")]),
-        _c("view", [_vm._v("33")]),
-        _c("view", [_vm._v("33")]),
-        _c("view", [_vm._v("33")])
+  return _c("view", [
+    _c("view", { staticClass: "header" }, [
+      _c("view", { staticClass: "note_header" }, [
+        _c("view", { staticClass: "tabs" }, [
+          _c(
+            "view",
+            {
+              staticClass: "title_name",
+              style: { fontWeight: _vm.tabWeight },
+              attrs: { eventid: "3d386525-0" },
+              on: {
+                click: function($event) {
+                  _vm.newClick(1)
+                }
+              }
+            },
+            [_vm._v("精选")]
+          ),
+          _c(
+            "view",
+            {
+              staticClass: "title_name",
+              style: { fontWeight: _vm.tabWeight1 },
+              attrs: { eventid: "3d386525-1" },
+              on: {
+                click: function($event) {
+                  _vm.newClick(2)
+                }
+              }
+            },
+            [_vm._v("最新")]
+          )
+        ]),
+        _vm._m(0),
+        _c("view", { class: _vm.tabAnClass })
       ])
-    ],
-    1
-  )
+    ]),
+    _c(
+      "view",
+      { staticStyle: { padding: "20rpx 10rpx", "margin-top": "100rpx" } },
+      [
+        _c(
+          "view",
+          { staticClass: "breakfast" },
+          _vm._l(_vm.footShowList, function(item, index) {
+            return _c(
+              "view",
+              {
+                key: item.id,
+                staticClass: "foot_show",
+                style: { background: item.color }
+              },
+              [
+                _c("view", { staticClass: "foot_icon" }, [
+                  _c("text", {
+                    staticClass: "iconfont",
+                    domProps: { innerHTML: _vm._s(item.icon) }
+                  })
+                ]),
+                _c("view", { staticClass: "show_name" }, [
+                  _vm._v(_vm._s(item.name))
+                ])
+              ]
+            )
+          })
+        )
+      ]
+    ),
+    _c("view", { staticClass: "topic" }, [
+      _c(
+        "view",
+        { staticClass: "topic_content" },
+        _vm._l(_vm.topicList, function(item, index) {
+          return _c("view", { key: item.id, staticClass: "topic_matter " }, [
+            _c("text", {
+              staticClass: "iconfont",
+              domProps: { innerHTML: _vm._s(item.icon) }
+            }),
+            _c("view", { staticClass: "name text_hidden" }, [
+              _vm._v(_vm._s(item.name))
+            ])
+          ])
+        })
+      )
+    ])
+  ])
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("view", { staticClass: "alarm_count" }, [
+      _c("text", { staticClass: "iconfont" }, [_vm._v("")])
+    ])
+  }
+]
 render._withStripped = true
 
 
