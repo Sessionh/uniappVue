@@ -1,1 +1,3 @@
+<import src="/pages/index/menu_list.vue.wxml" />
+<import src="/pages/shopping/shopping_time.vue.wxml" />
 

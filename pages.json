@@ -39,7 +39,10 @@
 		{
 			"path": "pages/shopping/shopping",
 			"style": {
-				"navigationBarTitleText": "商城"
+				// #ifdef APP-PLUS || H5 || APP-PLUS-NVUE
+				"navigationStyle":"custom",
+				// #endif
+				"navigationBarTitleText": ""
 			}
 		},
 		{

@@ -20,90 +20,68 @@
 			</view>
 		</view>
 		
-		
-		<view style="padding: 20upx 10upx;margin-top: 100upx;">
-			<view class="breakfast">
-				<view class="foot_show" :style="{background: item.color}" v-for="item in footShowList" :key="item.id">
-					<view class="foot_icon">
-						<text class="iconfont" v-html="item.icon"></text>
+		<view v-show="isChoiceness">
+			<view style="padding: 20upx 10upx;margin-top: 100upx;">
+				<view class="breakfast">
+					<view class="foot_show" :style="{background: item.color}" v-for="item in footShowList" :key="item.id">
+						<view class="foot_icon">
+							<text class="iconfont" v-html="item.icon"></text>
+						</view>
+						<view class="show_name">{{item.name}}</view>
 					</view>
-					<view class="show_name">{{item.name}}</view>
+					
 				</view>
-				
+			
 			</view>
-		
+			
+			<view class="topic">
+				<view class="topic_content">
+					<view class="topic_matter " v-for="item in topicList" :key="item.id">
+						<text class="iconfont" v-html="item.icon"></text>
+						<view class="name text_hidden">{{item.name}}</view>
+					</view>
+					
+				</view>
+			</view>
+			<footList :choicenessList="choicenessList"/>
 		</view>
 		
-		<view class="topic">
-			<view class="topic_content">
-				<view class="topic_matter " v-for="item in topicList" :key="item.id">
-					<text class="iconfont" v-html="item.icon"></text>
-					<view class="name text_hidden">{{item.name}}</view>
-				</view>
-				
+		<view v-show="!isChoiceness" class="new_foot">
+			<view>
+				<footList :choicenessList="newFootList"/>
 			</view>
 		</view>
+		
 		
 	</view>
 	
 </template>
 
 <script>
+	import footList from './foot_list.vue';
+	import {choicenessList, topicList, footShowList, newFootList} from './node.js';
 	export default {
+		components: {
+			footList,
+		},
 		data() {
 			return {
+				isChoiceness: true, // true:精选  false:最新
 				tabAnClass: 'tab_but',
-				topicList: [
-					{
-						id: 1,
-						name: '新出发，新年味',
-						icon: '&#xe623;'
-					},
-					{
-						id: 2,
-						name: '新出发可是看到可是看到看上课',
-						icon: '&#xe623;'
-					},
-					{
-						id: 3,
-						name: '我的生活有我',
-						icon: '&#xe623;'
-					},
-					{
-						id: 4,
-						name: '热门话题',
-						icon: '&#xe67a;'
-					}
-					
-				],
-				footShowList: [
-					{
-						id: 1,
-						name: '秀早餐',
-						color: '#eef2f5',
-						icon: '&#xe608;',
-					},
-					{
-						id: 2,
-						name: '秀午餐',
-						color: '#ded473',
-						icon: '&#xe807;',
-					},
-					{
-						id: 3,
-						name: '秀晚餐',
-						color: '#fed9ca',
-						icon: '&#xe613;',
-					}
-				]
+				choicenessList: choicenessList,
+				topicList: topicList,
+				footShowList: footShowList,
+				newFootList: newFootList,
 				
 			};
 		},
 		methods:{
 			newClick(val) {
 				if(val === 1){
+					this.isChoiceness = true;
 					this.tabAnClass = 'tab_but'
 				} else {
+					this.isChoiceness = false;
 					this.tabAnClass = 'tab_but1'
 				}
 				
@@ -126,12 +104,20 @@
 		text-overflow: ellipsis;
 		white-space: nowrap;
 	}
+	.hr_line {
+		height: 1upx;
+		width: 100%;
+		background: red;
+	}
+	
 	.header {
 		height: 90upx;
 		width: 100%;
 		position: fixed;
+		z-index: 2;
 		margin-bottom: 20upx;
 		top: 0;
+		background: #fff;
 		.note_header {
 			height: 90upx;
 			width: 100%;
@@ -215,13 +201,15 @@
 	.topic {
 		min-height: 60upx;
 		margin: 0 40upx;
+		padding: 20upx 0;
+		border-bottom: 1px solid #e8eaec;
 		.topic_content {
 			display: flex;
 		    flex-wrap: wrap;
 			width: 100%;
 			.topic_matter {
 				width: 50%;
-				height: 70upx;
+				height: 80upx;
 				// background: #808695;
 				display: flex;
 				align-items: center;
@@ -244,6 +232,10 @@
 	}
 	.header_top {
 		height: var(--status-bar-height);
+	}
+	
+	.new_foot {
+		padding: 100upx 0 0 0;
 	}
 	
 

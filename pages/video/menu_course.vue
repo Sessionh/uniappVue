@@ -39,32 +39,7 @@ export default {
 	},
 	data() {
 		return {
-// 			courseList: [
-// 				{
-// 					id: 1,
-// 					job: '老师',
-// 					url: 'https://cp1.douguo.com/upload/note/0/e/9/320_0eda66f4d33406521347720234e73f69.JPG',
-// 					title: '美味生活HowLivesdsd',
-// 					introTitle: '【限时特价】五星酒店甜品师，带给你法式饼干交响曲',
-// 					studentAdd: 21
-// 				},
-// 				{
-// 					id: 2,
-// 					job: '老师',
-// 					url: 'https://cp1.douguo.com/upload/caiku/6/b/c/260x220_6bfce96114f7d818fa6121c553291c2c.jpg',
-// 					title: '玉米银耳粥',
-// 					introTitle: '清甜的玉米，浓稠的银耳，就算不加糖都是美味的暖身饮',
-// 					studentAdd: 419
-// 				},
-// 				{
-// 					id: 3,
-// 					job: '老师',
-// 					url: 'https://cp1.douguo.com/upload/caiku/d/4/6/600_d43ce1e2445c2f2c2de4ea661280ae86.jpg',
-// 					title: '可爱小猫咪馒头',
-// 					introTitle: '放寒假了，跟孩子在一起有好多有趣的事情可以做',
-// 					studentAdd: 234
-// 				}
-// 			]
+
 			
 		}
 	}
@@ -126,14 +101,14 @@ export default {
 					border-radius: 10upx;
 				}
 				.teacher {
-					width: 60upx;
+					max-width: 120upx;
 					background: #fff;
 					position: absolute;
 					top: 300upx;
 					left: calc(25% + 60upx);
 					font-size: 25upx;
 					text-align: center;
-					padding: 2upx 0;
+					padding: 2upx 5upx;
 				}
 				
 				.title {

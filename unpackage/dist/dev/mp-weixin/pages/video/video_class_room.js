@@ -48,34 +48,9 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 
 
   data: function data() {
-    return {
-      // 			courseList: [
-      // 				{
-      // 					id: 1,
-      // 					job: '老师',
-      // 					url: 'https://cp1.douguo.com/upload/note/0/e/9/320_0eda66f4d33406521347720234e73f69.JPG',
-      // 					title: '美味生活HowLivesdsd',
-      // 					introTitle: '【限时特价】五星酒店甜品师，带给你法式饼干交响曲',
-      // 					studentAdd: 21
-      // 				},
-      // 				{
-      // 					id: 2,
-      // 					job: '老师',
-      // 					url: 'https://cp1.douguo.com/upload/caiku/6/b/c/260x220_6bfce96114f7d818fa6121c553291c2c.jpg',
-      // 					title: '玉米银耳粥',
-      // 					introTitle: '清甜的玉米，浓稠的银耳，就算不加糖都是美味的暖身饮',
-      // 					studentAdd: 419
-      // 				},
-      // 				{
-      // 					id: 3,
-      // 					job: '老师',
-      // 					url: 'https://cp1.douguo.com/upload/caiku/d/4/6/600_d43ce1e2445c2f2c2de4ea661280ae86.jpg',
-      // 					title: '可爱小猫咪馒头',
-      // 					introTitle: '放寒假了，跟孩子在一起有好多有趣的事情可以做',
-      // 					studentAdd: 234
-      // 				}
-      // 			]
-    };
+    return {};
+
+
 
   } };exports.default = _default;
 
@@ -214,8 +189,10 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 
 
 
+
 var _menu_icon = _interopRequireDefault(__webpack_require__(/*! ./menu_icon.vue */ "D:\\gits\\uniappVue\\pages\\video\\menu_icon.vue"));
-var _menu_course = _interopRequireDefault(__webpack_require__(/*! ./menu_course */ "D:\\gits\\uniappVue\\pages\\video\\menu_course.vue"));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}var _default =
+var _menu_course = _interopRequireDefault(__webpack_require__(/*! ./menu_course */ "D:\\gits\\uniappVue\\pages\\video\\menu_course.vue"));
+var _video = __webpack_require__(/*! ./video.js */ "D:\\gits\\uniappVue\\pages\\video\\video.js");function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}var _default =
 {
   components: {
     menuIcon: _menu_icon.default,
@@ -252,75 +229,11 @@ var _menu_course = _interopRequireDefault(__webpack_require__(/*! ./menu_course 
     return {
       isShow: true,
       title: '设置',
-      courseName: ['推荐课程', '新课上线'],
-      courseGetList: [
-      {
-        id: 1,
-        job: '老师',
-        url: 'https://cp1.douguo.com/upload/caiku/7/7/4/260x220_77552f222071573cf3bd591bbe1d30e4.jpg',
-        title: 'NEO的厨房',
-        introTitle: '大师入门：在家轻松玩转酥软手工披萨',
-        studentAdd: 21 },
-
-      {
-        id: 2,
-        job: '老师',
-        url: 'https://cp1.douguo.com/upload/caiku/5/c/4/220x220_5c665b785c884a6687396d2ccb327684.jpeg',
-        title: 'yn高小凤',
-        introTitle: '这次用的是黄河鲤鱼 大家可以选择鲈鱼 蒸起来更好吃',
-        studentAdd: 419 },
-
-      {
-        id: 3,
-        job: '老师',
-        url: 'https://cp1.douguo.com/upload/caiku/7/f/1/220x220_7f6e01dee2650e1dd4b1dcffbcb7ff61.jpeg',
-        title: 'SS迁',
-        introTitle: '蜜制叉烧',
-        studentAdd: 190 }],
-
-
-      courseList: [
-      {
-        id: 1,
-        job: '老师',
-        url: 'https://cp1.douguo.com/upload/note/0/e/9/320_0eda66f4d33406521347720234e73f69.JPG',
-        title: '美味生活HowLivesdsd',
-        introTitle: '【限时特价】五星酒店甜品师，带给你法式饼干交响曲',
-        studentAdd: 21 },
-
-      {
-        id: 2,
-        job: '老师',
-        url: 'https://cp1.douguo.com/upload/caiku/6/b/c/260x220_6bfce96114f7d818fa6121c553291c2c.jpg',
-        title: '玉米银耳粥',
-        introTitle: '清甜的玉米，浓稠的银耳，就算不加糖都是美味的暖身饮',
-        studentAdd: 419 },
-
-      {
-        id: 3,
-        job: '老师',
-        url: 'https://cp1.douguo.com/upload/caiku/d/4/6/600_d43ce1e2445c2f2c2de4ea661280ae86.jpg',
-        title: '可爱小猫咪馒头',
-        introTitle: '放寒假了，跟孩子在一起有好多有趣的事情可以做',
-        studentAdd: 234 }],
-
-
-      footImgList: [
-      {
-        id: 1,
-        url: 'https://cp1.douguo.com/upload/note/0/e/9/320_0eda66f4d33406521347720234e73f69.JPG' },
-
-      {
-        id: 2,
-        url: 'https://cp1.douguo.com/upload/note/2/c/d/320_2c548e174a5615cf444d9302e4e4e0fd.jpg' },
-
-      {
-        id: 3,
-        url: 'https://cp1.douguo.com/upload/caiku/2/c/0/260x220_2c668ad4c1b84d6e0711a425477f4ef0.JPG' }] };
-
-
-
-
+      courseName: ['推荐课程', '新课上线', '电子书'],
+      courseGetList: _video.courseGetList,
+      courseList: _video.courseList,
+      footImgList: _video.footImgList,
+      videoBook: _video.videoBook };
 
 
   } };exports.default = _default;
@@ -522,6 +435,13 @@ var render = function() {
           title: _vm.courseName[1],
           courseList: _vm.courseGetList,
           mpcomid: "2efd01b8-2"
+        }
+      }),
+      _c("menuCourse", {
+        attrs: {
+          title: _vm.courseName[2],
+          courseList: _vm.videoBook,
+          mpcomid: "2efd01b8-3"
         }
       })
     ],
@@ -737,6 +657,94 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _C_hb_HBuilderX_plugins_uniapp_cli_node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_C_hb_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_17_0_C_hb_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_webpack_uni_mp_loader_lib_template_js_C_hb_HBuilderX_plugins_uniapp_cli_node_modules_vue_loader_lib_index_js_vue_loader_options_menu_icon_vue_vue_type_template_id_37be6aad_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
+
+/***/ }),
+
+/***/ "D:\\gits\\uniappVue\\pages\\video\\video.js":
+/*!**********************************************!*\
+  !*** D:/gits/uniappVue/pages/video/video.js ***!
+  \**********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });exports.videoBook = exports.footImgList = exports.courseList = exports.courseGetList = void 0;var footImgList = [
+{
+  id: 1,
+  url: 'https://cp1.douguo.com/upload/note/0/e/9/320_0eda66f4d33406521347720234e73f69.JPG' },
+
+{
+  id: 2,
+  url: 'https://cp1.douguo.com/upload/note/2/c/d/320_2c548e174a5615cf444d9302e4e4e0fd.jpg' },
+
+{
+  id: 3,
+  url: 'https://cp1.douguo.com/upload/caiku/2/c/0/260x220_2c668ad4c1b84d6e0711a425477f4ef0.JPG' }];exports.footImgList = footImgList;
+
+
+
+var courseGetList = [
+{
+  id: 1,
+  job: '老师',
+  url: 'https://cp1.douguo.com/upload/caiku/7/7/4/260x220_77552f222071573cf3bd591bbe1d30e4.jpg',
+  title: 'NEO的厨房',
+  introTitle: '大师入门：在家轻松玩转酥软手工披萨',
+  studentAdd: 21 },
+
+{
+  id: 2,
+  job: '老师',
+  url: 'https://cp1.douguo.com/upload/caiku/5/c/4/220x220_5c665b785c884a6687396d2ccb327684.jpeg',
+  title: 'yn高小凤',
+  introTitle: '这次用的是黄河鲤鱼 大家可以选择鲈鱼 蒸起来更好吃',
+  studentAdd: 419 },
+
+{
+  id: 3,
+  job: '老师',
+  url: 'https://cp1.douguo.com/upload/caiku/7/f/1/220x220_7f6e01dee2650e1dd4b1dcffbcb7ff61.jpeg',
+  title: 'SS迁',
+  introTitle: '蜜制叉烧',
+  studentAdd: 190 }];exports.courseGetList = courseGetList;
+
+
+
+var courseList = [
+{
+  id: 1,
+  job: '老师',
+  url: 'https://cp1.douguo.com/upload/note/0/e/9/320_0eda66f4d33406521347720234e73f69.JPG',
+  title: '美味生活HowLivesdsd',
+  introTitle: '【限时特价】五星酒店甜品师，带给你法式饼干交响曲',
+  studentAdd: 21 },
+
+{
+  id: 2,
+  job: '老师',
+  url: 'https://cp1.douguo.com/upload/caiku/6/b/c/260x220_6bfce96114f7d818fa6121c553291c2c.jpg',
+  title: '玉米银耳粥',
+  introTitle: '清甜的玉米，浓稠的银耳，就算不加糖都是美味的暖身饮',
+  studentAdd: 419 },
+
+{
+  id: 3,
+  job: '老师',
+  url: 'https://cp1.douguo.com/upload/caiku/d/4/6/600_d43ce1e2445c2f2c2de4ea661280ae86.jpg',
+  title: '可爱小猫咪馒头',
+  introTitle: '放寒假了，跟孩子在一起有好多有趣的事情可以做',
+  studentAdd: 234 }];exports.courseList = courseList;
+
+
+
+var videoBook = [
+{
+  id: 1,
+  job: '电子书',
+  url: 'https://cp1.douguo.com/upload/caiku/f/8/5/400x266_f8bcacc56304cac19ffdbfda131b50b5.jpg',
+  title: '￥ 24.90 | 共23期',
+  introTitle: '【莲花卷】《面面俱到，我的第一本中式面食书》',
+  studentAdd: 32 }];exports.videoBook = videoBook;
 
 /***/ }),
 

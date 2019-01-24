@@ -93,14 +93,14 @@
   border-radius: 10rpx;
 }
 .course_view .intro_course .image_bor .teacher.data-v-32d9d64f {
-  width: 60rpx;
+  max-width: 120rpx;
   background: #fff;
   position: absolute;
   top: 300rpx;
   left: calc(25% + 60rpx);
   font-size: 25rpx;
   text-align: center;
-  padding: 2rpx 0;
+  padding: 2rpx 5rpx;
 }
 .course_view .intro_course .image_bor .title.data-v-32d9d64f {
   position: absolute;

@@ -40,7 +40,7 @@
 			</swiper>
 		</view>
 		<view class="menus">
-			<menuList/>
+			<menuList :menuList="menuListData"/>
 		</view>
 		<activityImage/>
 		<footLook/>
@@ -55,6 +55,7 @@
 	import menuList from './menu_list.vue';
 	import activityImage from './activity_image';
 	import footLook from './foot_look';
+	import {menuListData} from './main.js';
 	export default {
 		components: {
 			menuList,
@@ -66,6 +67,7 @@
 				title: 'Hello',
 				viewHeight: 300,
 				isShow: true,
+				menuListData: menuListData,
 				bannerList: [
 					{
 						id: 1,
