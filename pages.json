@@ -6,7 +6,7 @@
 				// #ifdef APP-PLUS || H5 || APP-PLUS-NVUE
 				"navigationStyle":"custom",
 				// #endif
-				"navigationBarTitleText": "首页",
+				"navigationBarTitleText": "",
 				"enablePullDownRefresh": true
 			}
 		},
@@ -31,24 +31,36 @@
 			}
 		},
 		{
-			"path": "pages/user/user",
+			"path": "pages/user/user_view",
 			"style": {
-				"navigationBarTitleText": "我的"
+				// #ifdef APP-PLUS || H5
+				"navigationStyle":"custom",
+				// #endif
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
 			}
 		},
 		{
-			"path": "pages/shopping/shopping",
+			"path": "pages/shopping/shopping_view",
 			"style": {
-				// #ifdef APP-PLUS || H5 || APP-PLUS-NVUE
+				// #ifdef APP-PLUS || H5 
 				"navigationStyle":"custom",
 				// #endif
-				"navigationBarTitleText": ""
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": true
 			}
 		},
 		{
 			"path": "pages/home/mast",
 			"style": {
 				"navigationBarTitleText": "子页面"
+			}
+		},
+		{
+			"path": "pages/index/subpage/menu_type",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": true
 			}
 		}
 		
@@ -91,13 +103,13 @@
 				"text": "笔记"
 			},
 			{
-				"pagePath": "pages/shopping/shopping",
+				"pagePath": "pages/shopping/shopping_view",
 				"iconPath": "static/menu/shopping.png",
 				"selectedIconPath": "static/menu/shoppingS.png",
 				"text": "商城"
 			},
 			{
-				"pagePath": "pages/user/user",
+				"pagePath": "pages/user/user_view",
 				"iconPath": "static/menu/my.png",
 				"selectedIconPath": "static/menu/myS.png",
 				"text": "我的"

@@ -3,9 +3,10 @@
     "pages/index/index",
     "pages/video/video_class_room",
     "pages/note/note",
-    "pages/user/user",
-    "pages/shopping/shopping",
-    "pages/home/mast"
+    "pages/user/user_view",
+    "pages/shopping/shopping_view",
+    "pages/home/mast",
+    "pages/index/subpage/menu_type"
   ],
   "subPackages": [],
   "window": {
@@ -39,13 +40,13 @@
         "text": "笔记"
       },
       {
-        "pagePath": "pages/shopping/shopping",
+        "pagePath": "pages/shopping/shopping_view",
         "iconPath": "static/menu/shopping.png",
         "selectedIconPath": "static/menu/shoppingS.png",
         "text": "商城"
       },
       {
-        "pagePath": "pages/user/user",
+        "pagePath": "pages/user/user_view",
         "iconPath": "static/menu/my.png",
         "selectedIconPath": "static/menu/myS.png",
         "text": "我的"

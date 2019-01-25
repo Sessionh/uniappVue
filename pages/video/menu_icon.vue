@@ -2,7 +2,7 @@
 	<view class="menu">
 		<view class="menu_icon" v-for="item in menuList" :key="item.id">
 			<view class="icon">
-				<text class="iconfont" :style="{color: item.color}" v-html="item.icon"></text>
+				<text class="iconfont" :style="{color: item.color}" :class="item.icon"></text>
 			</view>
 			<view class="title">
 				{{item.name}}
@@ -23,61 +23,61 @@
 					{
 						id: 1,
 						name: '面包',
-						icon: '&#xe612;',
+						icon: 'icon-mianbao',
 						color: '#f16821',
 					},
 					{
 						id: 2,
 						name: '甜点',
-						icon: '&#xe632;',
+						icon: 'icon-cake',
 						color: '#f185b3',
 					},
 					{
 						id: 3,
 						name: '中式面条',
-						icon: '&#xe609;',
+						icon: 'icon-mian',
 						color: '#6b7b8e',
 					},
 					{
 						id: 4,
 						name: '特色小吃',
-						icon: '&#xe608;',
+						icon: 'icon-xinniantubiao-shangchuantubiaoku-',
 						color: '#ffcd60',
 					},
 					{
 						id: 5,
 						name: '家常菜',
-						icon: '&#xe603;',
+						icon: 'icon-chuju01',
 						color: '#f16821',
 					},
 					{
 						id: 6,
 						name: '蛋糕',
-						icon: '&#xe627;',
+						icon: 'icon-dangao',
 						color: '#f59aa3',
 					},
 					{
 						id: 7,
 						name: '饮品',
-						icon: '&#xe619;',
+						icon: 'icon-yinliao',
 						color: '#c9f658',
 					},
 					{
 						id: 8,
 						name: '宝宝辅食',
-						icon: '&#xe615;',
+						icon: 'icon-fushi-muying',
 						color: '#fe9191',
 					},
 					{
 						id: 9,
 						name: '一元秒杀',
-						icon: '&#xe611;',
+						icon: 'icon-yiyuanmiaosha',
 						color: '#e29c68',
 					},
 					{
 						id: 10,
 						name: '免费课程',
-						icon: '&#xe606;',
+						icon: 'icon-kechengchaxun',
 						color: '#665c84',
 					}
 				]

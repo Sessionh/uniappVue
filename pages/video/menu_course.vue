@@ -2,8 +2,7 @@
 	<view class="course">
 		<view class="header">
 			<view class="title">{{title}}</view>
-			
-			<text class="iconfont" >&#xe79a;</text>
+			<text class="iconfont icon-youbian" ></text>
 		</view>
 		<scroll-view class="course_view" scroll-x="true">
 			<view class="fill_context">

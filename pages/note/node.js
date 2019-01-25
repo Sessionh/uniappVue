@@ -88,22 +88,22 @@ const topicList = [
 	{
 		id: 1,
 		name: '新出发，新年味',
-		icon: '&#xe623;'
+		icon: 'icon-xiaoxi1'
 	},
 	{
 		id: 2,
 		name: '新出发可是看到可是看到看上课',
-		icon: '&#xe623;'
+		icon: 'icon-xiaoxi1'
 	},
 	{
 		id: 3,
 		name: '我的生活有我',
-		icon: '&#xe623;'
+		icon: 'icon-xiaoxi1'
 	},
 	{
 		id: 4,
 		name: '热门话题',
-		icon: '&#xe67a;'
+		icon: 'icon-chaojihuati-remen'
 	}
 	
 ];
@@ -113,19 +113,19 @@ const footShowList = [
 		id: 1,
 		name: '秀早餐',
 		color: '#eef2f5',
-		icon: '&#xe608;',
+		icon: 'icon-xinniantubiao-shangchuantubiaoku-',
 	},
 	{
 		id: 2,
 		name: '秀午餐',
 		color: '#ded473',
-		icon: '&#xe807;',
+		icon: 'icon-wan',
 	},
 	{
 		id: 3,
 		name: '秀晚餐',
 		color: '#fed9ca',
-		icon: '&#xe613;',
+		icon: 'icon-zhangxuyangcansaitubiao-',
 	}
 ]
 

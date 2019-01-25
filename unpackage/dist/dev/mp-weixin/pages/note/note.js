@@ -300,10 +300,7 @@ var render = function() {
                   },
                   [
                     _c("view", { staticClass: "foot_icon" }, [
-                      _c("text", {
-                        staticClass: "iconfont",
-                        domProps: { innerHTML: _vm._s(item.icon) }
-                      })
+                      _c("text", { staticClass: "iconfont", class: item.icon })
                     ]),
                     _c("view", { staticClass: "show_name" }, [
                       _vm._v(_vm._s(item.name))
@@ -323,10 +320,7 @@ var render = function() {
                 "view",
                 { key: item.id, staticClass: "topic_matter " },
                 [
-                  _c("text", {
-                    staticClass: "iconfont",
-                    domProps: { innerHTML: _vm._s(item.icon) }
-                  }),
+                  _c("text", { staticClass: "iconfont", class: item.icon }),
                   _c("view", { staticClass: "name text_hidden" }, [
                     _vm._v(_vm._s(item.name))
                   ])
@@ -374,7 +368,7 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("view", { staticClass: "alarm_count" }, [
-      _c("text", { staticClass: "iconfont" }, [_vm._v("")])
+      _c("text", { staticClass: "iconfont icon-weiwangguanicon-defuben-" })
     ])
   }
 ]
@@ -587,22 +581,22 @@ var topicList = [
 {
   id: 1,
   name: '新出发，新年味',
-  icon: '&#xe623;' },
+  icon: 'icon-xiaoxi1' },
 
 {
   id: 2,
   name: '新出发可是看到可是看到看上课',
-  icon: '&#xe623;' },
+  icon: 'icon-xiaoxi1' },
 
 {
   id: 3,
   name: '我的生活有我',
-  icon: '&#xe623;' },
+  icon: 'icon-xiaoxi1' },
 
 {
   id: 4,
   name: '热门话题',
-  icon: '&#xe67a;' }];exports.topicList = topicList;
+  icon: 'icon-chaojihuati-remen' }];exports.topicList = topicList;
 
 
 
@@ -612,19 +606,19 @@ var footShowList = [
   id: 1,
   name: '秀早餐',
   color: '#eef2f5',
-  icon: '&#xe608;' },
+  icon: 'icon-xinniantubiao-shangchuantubiaoku-' },
 
 {
   id: 2,
   name: '秀午餐',
   color: '#ded473',
-  icon: '&#xe807;' },
+  icon: 'icon-wan' },
 
 {
   id: 3,
   name: '秀晚餐',
   color: '#fed9ca',
-  icon: '&#xe613;' }];exports.footShowList = footShowList;
+  icon: 'icon-zhangxuyangcansaitubiao-' }];exports.footShowList = footShowList;
 
 /***/ }),
 

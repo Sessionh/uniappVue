@@ -1,0 +1,8 @@
+<import src="/pages/index/menu_list.vue.wxml" />
+<import src="/pages/index/activity_image.vue.wxml" />
+<import src="/pages/index/foot_look.vue.wxml" />
+<import src="/pages/video/menu_icon.vue.wxml" />
+<import src="/pages/video/menu_course.vue.wxml" />
+<import src="/pages/shopping/shopping_time.vue.wxml" />
+<import src="/pages/note/foot_list.vue.wxml" />
+

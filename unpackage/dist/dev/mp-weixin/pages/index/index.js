@@ -295,6 +295,12 @@ var _main = __webpack_require__(/*! ./main.js */ "D:\\gits\\uniappVue\\pages\\in
       // 				uni.navigateTo({
       // 					url: '/pages/home/mast'
       // 				})
+    },
+    onMenuClick: function onMenuClick(ev) {
+      console.log(ev);
+      uni.navigateTo({
+        url: '/pages/index/subpage/menu_type' });
+
     } } };exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ "./node_modules/@dcloudio/uni-mp-weixin/dist/index.js")["default"]))
 
@@ -426,11 +432,11 @@ var render = function() {
           _c("view", { staticClass: "flexOne" }),
           _c("view", { staticClass: "star" }, [
             _c("view", { staticClass: "watch_me" }, [
-              _c("text", { staticClass: "iconfont" }, [_vm._v("")]),
+              _c("text", { staticClass: "iconfont icon-yanjing" }),
               _c("text", { staticClass: "num" }, [_vm._v(_vm._s(item.watch))])
             ]),
             _c("view", { staticClass: "star_num" }, [
-              _c("text", { staticClass: "iconfont" }, [_vm._v("")]),
+              _c("text", { staticClass: "iconfont icon-xingxing" }),
               _c("text", { staticClass: "num" }, [_vm._v(_vm._s(item.star))])
             ])
           ])
@@ -447,7 +453,7 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("view", [_c("text", { staticClass: "iconfont" }, [_vm._v("")])])
+    return _c("view", [_c("text", { staticClass: "iconfont icon-huiyuan" })])
   }
 ]
 render._withStripped = true
@@ -524,7 +530,12 @@ var render = function() {
         { staticClass: "menus" },
         [
           _c("menuList", {
-            attrs: { menuList: _vm.menuListData, mpcomid: "597a290b-1" }
+            attrs: {
+              menuList: _vm.menuListData,
+              eventid: "597a290b-0",
+              mpcomid: "597a290b-1"
+            },
+            on: { onIcon: _vm.onMenuClick }
           })
         ],
         1
@@ -542,17 +553,17 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("view", { staticClass: "search" }, [
       _c("view", { staticClass: "add" }, [
-        _c("text", { staticClass: "iconfont" }, [_vm._v("")])
+        _c("text", { staticClass: "iconfont icon-tianjiajiahaowubiankuang" })
       ]),
       _c("view", { staticClass: "input" }, [
-        _c("text", { staticClass: "iconfont" }, [_vm._v("")]),
+        _c("text", { staticClass: "iconfont icon-sousuo1" }),
         _c("view", { staticClass: "search_title" }, [_vm._v("菜单、用户等")])
       ]),
       _c("view", { staticClass: "menu" }, [
-        _c("text", { staticClass: "iconfont" }, [_vm._v("")])
+        _c("text", { staticClass: "iconfont icon-fenlei" })
       ]),
       _c("view", { staticClass: "alarm" }, [
-        _c("text", { staticClass: "iconfont" }, [_vm._v("")])
+        _c("text", { staticClass: "iconfont icon-weiwangguanicon-defuben-" })
       ])
     ])
   }

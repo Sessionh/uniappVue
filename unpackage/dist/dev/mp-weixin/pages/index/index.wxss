@@ -42,12 +42,12 @@
   white-space: nowrap;
 }
 .foot.data-v-403ba88a {
-  padding: 10rpx 40rpx 20rpx 40rpx;
+  padding: 0 40rpx;
 }
 .foot_context.data-v-403ba88a {
   height: 500rpx;
   width: 100%;
-  margin-bottom: 20rpx;
+  margin-top: 40rpx;
 }
 .foot_context .user_star.data-v-403ba88a {
   display: -webkit-box;
@@ -112,6 +112,9 @@
       -ms-flex: 1;
           flex: 1;
   height: 20rpx;
+}
+.foot_context .title.data-v-403ba88a {
+  font-size: 35rpx;
 }
 .image_cont.data-v-403ba88a {
   height: 372rpx;

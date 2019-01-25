@@ -6,17 +6,17 @@
 		<view class="header"  v-if="isShow">
 			<view class="search">
 				<view class="add">
-					<text class="iconfont" >&#xe81a;</text>
+					<text class="iconfont icon-tianjiajiahaowubiankuang" ></text>
 				</view>
 				<view class="input">
-					<text class="iconfont">&#xe652;</text>
+					<text class="iconfont icon-sousuo1"></text>
 					<view class="search_title">菜单、用户等</view>
 				</view>
 				<view class="menu">
-					<text class="iconfont">&#xe636;</text>
+					<text class="iconfont icon-fenlei"></text>
 				</view>
 				<view class="alarm">
-					<text class="iconfont">&#xe679;</text>
+					<text class="iconfont icon-weiwangguanicon-defuben-"></text>
 				</view>
 			</view>
 			<view class="half_bar"/>
@@ -40,7 +40,7 @@
 			</swiper>
 		</view>
 		<view class="menus">
-			<menuList :menuList="menuListData"/>
+			<menuList :menuList="menuListData" @onIcon="onMenuClick"/>
 		</view>
 		<activityImage/>
 		<footLook/>
@@ -137,6 +137,12 @@
 // 				uni.navigateTo({
 // 					url: '/pages/home/mast'
 // 				})
+			},
+			onMenuClick(ev) {
+				console.log(ev);
+				uni.navigateTo({
+					url: '/pages/index/subpage/menu_type'
+				})
 			}
 			
 

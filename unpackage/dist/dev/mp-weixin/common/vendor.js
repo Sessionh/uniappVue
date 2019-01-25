@@ -6140,60 +6140,14 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 
 
   data: function data() {
-    return {
-      // 				menuList: [
-      // 					{
-      // 						id: 1,
-      // 						name: '菜谱分类',
-      // 						icon: '&#xe653;',
-      // 						color: 'blue',
-      // 					},
-      // 					{
-      // 						id: 2,
-      // 						name: '健康指标',
-      // 						icon: '&#xe62d;',
-      // 						color: 'green',
-      // 					},
-      // 					{
-      // 						id: 3,
-      // 						name: '签到领现金',
-      // 						icon: '&#xe625;',
-      // 						color: 'red',
-      // 					},
-      // 					{
-      // 						id: 4,
-      // 						name: '关注动态',
-      // 						icon: '&#xe6a9;',
-      // 						color: '#448ef6',
-      // 					},
-      // 					{
-      // 						id: 5,
-      // 						name: '精品菜单',
-      // 						icon: '&#xe607;',
-      // 						color: '#009f9d',
-      // 					},
-      // 					{
-      // 						id: 6,
-      // 						name: '安佳美食站',
-      // 						icon: '&#xe66c;',
-      // 						color: '#d34848',
-      // 					},
-      // 					{
-      // 						id: 7,
-      // 						name: '视频菜谱',
-      // 						icon: '&#xe65d;',
-      // 						color: '#41aaa8',
-      // 					},
-      // 					{
-      // 						id: 8,
-      // 						name: '母婴专区',
-      // 						icon: '&#xe616;',
-      // 						color: '#ff8162',
-      // 					}
-      // 				]
-    };
+    return {};
 
-  } };exports.default = _default;
+
+  },
+  methods: {
+    onIcon: function onIcon(val) {
+      this.$emit('onIcon', val);
+    } } };exports.default = _default;
 
 /***/ }),
 
@@ -6227,16 +6181,29 @@ var render = function() {
     "view",
     { staticClass: "menu" },
     _vm._l(_vm.menuList, function(item, index) {
-      return _c("view", { key: item.id, staticClass: "menu_icon" }, [
-        _c("view", { staticClass: "icon" }, [
-          _c("text", {
-            staticClass: "iconfont",
-            class: item.icon,
-            style: { color: item.color }
-          })
-        ]),
-        _c("view", { staticClass: "title" }, [_vm._v(_vm._s(item.name))])
-      ])
+      return _c(
+        "view",
+        {
+          key: item.id,
+          staticClass: "menu_icon",
+          attrs: { eventid: "241e1337-0-" + index },
+          on: {
+            click: function($event) {
+              _vm.onIcon(item)
+            }
+          }
+        },
+        [
+          _c("view", { staticClass: "icon" }, [
+            _c("text", {
+              staticClass: "iconfont",
+              class: item.icon,
+              style: { color: item.color }
+            })
+          ]),
+          _c("view", { staticClass: "title" }, [_vm._v(_vm._s(item.name))])
+        ]
+      )
     })
   )
 }

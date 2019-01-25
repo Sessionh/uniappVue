@@ -14,7 +14,7 @@
 					</view>
 				</view>
 				<view class="alarm_count">
-					<text class="iconfont">&#xe679;</text>
+					<text class="iconfont icon-weiwangguanicon-defuben-"></text>
 				</view>
 				<view :class="tabAnClass"></view>
 			</view>
@@ -25,7 +25,7 @@
 				<view class="breakfast">
 					<view class="foot_show" :style="{background: item.color}" v-for="item in footShowList" :key="item.id">
 						<view class="foot_icon">
-							<text class="iconfont" v-html="item.icon"></text>
+							<text class="iconfont" :class="item.icon"></text>
 						</view>
 						<view class="show_name">{{item.name}}</view>
 					</view>
@@ -37,7 +37,7 @@
 			<view class="topic">
 				<view class="topic_content">
 					<view class="topic_matter " v-for="item in topicList" :key="item.id">
-						<text class="iconfont" v-html="item.icon"></text>
+						<text class="iconfont" :class="item.icon"></text>
 						<view class="name text_hidden">{{item.name}}</view>
 					</view>
 					

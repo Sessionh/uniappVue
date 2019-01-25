@@ -1,6 +1,6 @@
 <template>
 	<view class="menu">
-		<view class="menu_icon" v-for="item in menuList" :key="item.id">
+		<view class="menu_icon" v-for="item in menuList" :key="item.id" @click="onIcon(item)">
 			<view class="icon">
 				<text class="iconfont" :class="item.icon" :style="{color: item.color}"></text>
 			</view>
@@ -25,58 +25,13 @@
 		},
 		data() {
 			return {
-// 				menuList: [
-// 					{
-// 						id: 1,
-// 						name: '菜谱分类',
-// 						icon: '&#xe653;',
-// 						color: 'blue',
-// 					},
-// 					{
-// 						id: 2,
-// 						name: '健康指标',
-// 						icon: '&#xe62d;',
-// 						color: 'green',
-// 					},
-// 					{
-// 						id: 3,
-// 						name: '签到领现金',
-// 						icon: '&#xe625;',
-// 						color: 'red',
-// 					},
-// 					{
-// 						id: 4,
-// 						name: '关注动态',
-// 						icon: '&#xe6a9;',
-// 						color: '#448ef6',
-// 					},
-// 					{
-// 						id: 5,
-// 						name: '精品菜单',
-// 						icon: '&#xe607;',
-// 						color: '#009f9d',
-// 					},
-// 					{
-// 						id: 6,
-// 						name: '安佳美食站',
-// 						icon: '&#xe66c;',
-// 						color: '#d34848',
-// 					},
-// 					{
-// 						id: 7,
-// 						name: '视频菜谱',
-// 						icon: '&#xe65d;',
-// 						color: '#41aaa8',
-// 					},
-// 					{
-// 						id: 8,
-// 						name: '母婴专区',
-// 						icon: '&#xe616;',
-// 						color: '#ff8162',
-// 					}
-// 				]
 				
 			};
+		},
+		methods: {
+			onIcon(val) {
+				this.$emit('onIcon', val);
+			}
 		}
 	}
 </script>

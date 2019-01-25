@@ -11,7 +11,7 @@
 				</view>
 				<view class="member" v-if="item.isMember">
 					<view>
-						<text class="iconfont">&#xe647;</text>
+						<text class="iconfont icon-huiyuan"></text>
 					</view>
 					<text class="mTitle">会员</text>
 					<view >
@@ -24,11 +24,11 @@
 				</view>
 				<view class="star">
 					<view class="watch_me">
-						<text class="iconfont">&#xe681;</text>
+						<text class="iconfont icon-yanjing"></text>
 						<text class="num">{{item.watch}}</text>
 					</view>
 					<view class="star_num">
-						<text class="iconfont">&#xe618;</text>
+						<text class="iconfont icon-xingxing"></text>
 						<text class="num">{{item.star}}</text>
 					</view>
 				</view>
@@ -88,8 +88,8 @@ export default {
 	white-space:nowrap;
 }
 .foot {
-	
-	padding: 10upx 40upx 20upx 40upx;
+	// margin-top: 20upx;
+	padding: 0 40upx;
 	
 }
 
@@ -97,7 +97,7 @@ export default {
 	// background: #009f9d;
 	height: 500upx;
 	width: 100%;
-	margin-bottom: 20upx;
+	margin-top: 40upx;
 	.user_star {
 		display: flex;
 		align-items: center;
@@ -161,6 +161,9 @@ export default {
 			// background: #ccc;
 			
 		}
+	}
+	.title {
+		font-size: 35upx;
 	}
 		
 }

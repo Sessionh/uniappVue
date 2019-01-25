@@ -5,7 +5,7 @@
 		<!-- #endif -->
 		<view class="header" v-if="isShow">
 	       <view class="search">
-			   <text class="iconfont">&#xe652;</text>
+			   <text class="iconfont icon-sousuo1"></text>
 			   <view class="search_title">搜索感兴趣的课程</view>
 		   </view>
 		   <view class="yet_buy">已购买</view>

@@ -1,26 +1,26 @@
 const menuListData = [
 	{
 		id: 1,
-		name: '菜谱分类',
-		icon: 'icon-icon',
-		color: 'blue',
+		name: '会员商品',
+		icon: 'icon-vipb',
+		color: '#fdb44b',
 	},
 	{
 		id: 2,
-		name: '健康指标',
-		icon: 'icon-anquan',
+		name: '豆果我买',
+		icon: 'icon-mendianxianxing',
 		color: 'green',
 	},
 	{
 		id: 3,
-		name: '签到领现金',
-		icon: 'icon-icon-test',
-		color: 'red',
+		name: '健康养生',
+		icon: 'icon-yangsheng',
+		color: '#fdb44b',
 	},
 	{
 		id: 4,
-		name: '关注动态',
-		icon: 'icon-xiaoxi-',
+		name: '烘培美厨',
+		icon: 'icon-chufang',
 		color: '#448ef6',
 	}
 ]
