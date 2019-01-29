@@ -13,7 +13,7 @@
 					<view>
 						<text class="iconfont icon-huiyuan"></text>
 					</view>
-					<text class="mTitle">会员1</text>
+					<text class="mTitle">会员</text>
 					<view >
 					</view>
 				
