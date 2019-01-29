@@ -10,7 +10,7 @@
 				</view>
 				<view class="input">
 					<text class="iconfont icon-sousuo1"></text>
-					<view class="search_title">菜单、用户等</view>
+					<view class="search_title">菜单、用户等1</view>
 				</view>
 				<view class="menu">
 					<text class="iconfont icon-fenlei"></text>
