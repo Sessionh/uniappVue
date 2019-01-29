@@ -1,1 +1,0 @@
-{"version":3,"sources":["webpack:///D:/gits/uniappVue/main.js"],"names":["Page","App"],"mappings":";;;;;;;;;;AAAA;AACA;AACI,wI;AACAA,IAAI,CAAC,+BAAYC,cAAZ,CAAD,CAAJ,C","file":"pages/video/video.js","sourcesContent":["import 'uni-pages';\nimport pageFactory from 'mpvue-page-factory'\n    import App from './pages/video/video.vue'\n    Page(pageFactory(App))"],"sourceRoot":""}
