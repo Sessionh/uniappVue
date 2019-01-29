@@ -134,9 +134,9 @@
 					}
 				})
 				
-// 				uni.navigateTo({
-// 					url: '/pages/home/mast'
-// 				})
+				uni.navigateTo({
+					url: '/pages/home/mast'
+				})
 			},
 			onMenuClick(ev) {
 				console.log(ev);
