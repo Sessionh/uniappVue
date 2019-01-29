@@ -8,6 +8,8 @@
 				// #endif
 				"navigationBarTitleText": "",
 				"enablePullDownRefresh": true
+				
+				
 			}
 		},
 		{
@@ -43,7 +45,7 @@
 		{
 			"path": "pages/shopping/shopping_view",
 			"style": {
-				// #ifdef APP-PLUS || H5 
+				// #ifndef MP-WEIXIN 
 				"navigationStyle":"custom",
 				// #endif
 				"navigationBarTitleText": "",
@@ -59,8 +61,12 @@
 		{
 			"path": "pages/index/subpage/menu_type",
 			"style": {
+				// #ifndef MP-WEIXIN 
+				"navigationStyle":"custom",
+				// #endif
 				"navigationBarTitleText": "",
 				"enablePullDownRefresh": true
+				
 			}
 		}
 		
@@ -68,9 +74,9 @@
 	],
 	
 	"globalStyle": {
-// 		// #ifndef MP-WEIXIN
-// 		"navigationStyle":"custom",
-// 		// #endif
+		// #ifndef MP-WEIXIN 
+		"navigationStyle":"custom",
+		// #endif
 		"navigationBarTextStyle": "black",
 		"navigationBarTitleText": "首页",
 		"navigationBarBackgroundColor": "#F8F8F8",

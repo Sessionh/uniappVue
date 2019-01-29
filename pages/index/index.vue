@@ -143,6 +143,7 @@
 				uni.navigateTo({
 					url: '/pages/index/subpage/menu_type'
 				})
+				
 			}
 			
 
@@ -216,22 +217,20 @@
 	
 }
 .header_top {
-	height: var(--status-bar-height)
+	height: var(--status-bar-height);
 }
 .header {
 	position: fixed;
-	top: 0px;
+	top: 0upx;
 	height: 90upx;
 	width: 100%;
 	z-index: 2;
 	
 }
-	
-	
 .part{
     width: 100%;
     height: 300upx;
-	margin-top: 100upx;
+	margin-top: 90upx;
 	.banner_box{
 	    width: 100%;
 	    height: 100%;
