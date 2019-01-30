@@ -6,23 +6,27 @@
 			<text class="iconfont icon-sousuo1"></text>
 		</view>
 		<view class="menu_content">
-			<scroll-view class="menu_left" scroll-y="true">
+			
+			<scroll-view class="menu_left" :style="{height: viewHeight + 'px'}" scroll-y="true">
 				<view 
 				    class="text_hide_one" 
-					:class="thatS === item.id ? 'menu_sub_s': 'menu_sub'" 
-					@click="menuClick(item)" 
-					v-for="item in menuList" :key="item.id">{{item.name}}</view>
+					:class="thatS === items.id ? 'menu_sub_s': 'menu_sub'" 
+					@click="menuClick(items)" 
+					v-for="items in menuList" :key="items.id">{{items.name}}</view>
 				
 			</scroll-view>
-			
-			<scroll-view class="content" scroll-y="true">
-				<view class="content_foot">
-					<view class="title">
-						<view class="name">热门食材</view>
-						<image class="image" src="https://cp1.douguo.com/upload/shicai/1446100075.jpg"></image>
+			<scroll-view class="content" :style="{height: viewHeight + 'px'}" scroll-y="true">
+				<view class="content_foot" v-for="(item, index) in hotFootList" :key="index">
+					<view class="title" :style="{background: item.color}">
+						<view class="name">{{item.title}}</view>
+						<image class="image" :src="item.img"></image>
 					</view>
 					<view class="flex_menu">
-						<view class="flex_context" v-for="item in hotFootList" :key="item.id">{{item.name}}</view>
+						<view class="flex_context" 
+						    v-for="(itemSub, itemIndex) in item.subs" 
+							:key="itemIndex"
+							@click="contentClick(itemSub)"
+						>{{itemSub.name}}</view>
 						
 					</view>
 				</view>
@@ -34,68 +38,33 @@
 </template>
 
 <script>
+import {menuList, hotFootList, greenstuffList} from './menu_type_data.js'
 export default {
 	data() {
 		return {
 			thatS: 1,
-			menuList: [
-				{
-					id: 1,
-					name: '热门',
-				},
-				{
-					id: 2,
-					name: '蔬菜',
-				},
-				{
-					id: 3,
-					name: '肉类大全',
-				},
-				{
-					id: 4,
-					name: '主食',
-				}
-			],
-			hotFootList: [
-				{
-					id: 1,
-					name: '面条',
-				},
-				{
-					id:2,
-					name: '豆腐',
-				},
-				{
-					id:3,
-					name: '排骨',
-				},
-				{
-					id: 4,
-					name: '土豆',
-				},
-				{
-					id: 5,
-					name: '牛肉',
-				},
-				{
-					id: 6,
-					name: '鸡蛋',
-				},
-				{
-					id: 7,
-					name: '羊肉',
-				},
-				{
-					id: 8,
-					name: '虾',
-				},
-				{
-					id: 9,
-					name: '茄子',
-				}
-			]
+			menuList: menuList,
+			hotFootList: hotFootList,
+			viewHeight: 300,
 			
 		}
+	},
+	onLoad() {
+		uni.getSystemInfo({
+			success: (res) => {
+				// #ifndef MP-WEIXIN
+				this.viewHeight = res.windowHeight -39;
+					console.log(this.viewHeight);
+				// #endif
+				// #ifdef MP-WEIXIN
+				this.viewHeight = res.windowHeight - 39;
+				// #endif
+				
+				
+				
+			}
+		})
+	
 	},
 	methods: {
 		onBack() {
@@ -104,7 +73,21 @@ export default {
 			})
 		},
 		menuClick(val) {
+			console.log(val);
+			switch(val.id) {
+				case 1:
+				    this.hotFootList = hotFootList;
+				    break;
+				case 2:
+				    this.hotFootList = greenstuffList;
+				    break;
+			}
+			
 			this.thatS = val.id;
+		},
+		contentClick(val) {
+			console.log(val);
+			
 		}
 	}
 }
@@ -131,6 +114,7 @@ export default {
 	position: fixed;
 	border-bottom: 1upx solid #e8eaec;
 	z-index: 2;
+	background: white;
 	.title {
 		flex: 1;
 		text-align: center;
@@ -151,17 +135,18 @@ export default {
 	display: flex;
 	.menu_left {
 		width: 200upx;
-		// box-shadow: #ccc 0 0 10upx;
+		height: 700upx;
+		
 		font-size: 30upx;
 		.menu_sub {
-			padding: 30upx 0;
-			background: black;
+			padding: 30upx 5upx;
+			background: #283148;
 			color: white;
 			text-align: center;
 			
 		}
 		.menu_sub_s {
-			padding: 30upx 0;
+			padding: 30upx 5upx;
 			background: white;
 			color: green;
 			text-align: center;
@@ -170,16 +155,15 @@ export default {
 		
 	}
 	.content {
-		// width: calc(100% - 175upx);
-		padding: 20upx;
+		padding: 0 20upx;
 		.content_foot {
-			
+			margin-top: 30upx;
 			.title {
 				display: flex;
 				width: 100%;
-				background: #f5f5f5;
+				// background: #f5f5f5;
 				align-items: center;
-				padding: 20upx 0;
+				padding: 25upx 0;
 				margin: 10upx 0;
 				.image {
 					width: 46upx;
@@ -200,12 +184,12 @@ export default {
 			.flex_menu {
 				display: flex;
 				flex-wrap: wrap;
-				justify-content: space-between;
+				justify-content: space-around;
 				width: 100%;
 				.flex_context {
-					padding: 15upx 0;
+					padding: 15upx 5upx;
 					border: 1upx solid #ccc;
-					width: 30%;
+					min-width: 30%;
 					text-align: center;
 					margin: 10upx 0;
 					border-radius: 8upx;

@@ -9,9 +9,6 @@
 			</view>
 		</view>
 		
-		
-		
-		
 	</view>
 </template>
 
